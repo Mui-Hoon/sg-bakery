@@ -1,148 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>United Bakery Order</title>
-    <link href="https://fonts.googleapis.com/css?family=Stint+Ultra+Expanded" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/united-bakery.css">
-    <link rel="stylesheet" href="css/order.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Stint+Ultra+Expanded"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/united-bakery.css" />
+    <link rel="stylesheet" href="css/order.css" />
+  </head>
 
-<body>
+  <body>
     <div class="container-fluid">
-        <!-- 1st row - Header -->
-        <div class="row">
-            <div class="col-md-12 header-padding">
-                <div w3-include-html="header.html"></div>
-            </div>
+      <!-- 1st row - Header -->
+      <div class="row">
+        <div class="col-md-12 header-padding">
+          <div w3-include-html="header.html"></div>
         </div>
+      </div>
 
-        <!-- 2nd row - Content Section -->
-        <div class="row">
-            <main>
-                <div class="container">
-                    <form class="form-horizontal" id="myForm">
-                        <h2>Pizza Order Form</h2>
-                        <fieldset class="border p-2">
-                            <legend class="w-auto ">Design your pizza</legend>
-                            <div class="form-group mx-2 row">
-                                <label class="control-label col-sm-2 my-2" for="type">Pizza Type:</label>
-                                <div class="col-sm-6">
-                                    <select class="form-control pb-2" id="type" name="pizza type"></select>
-                                </div>
-                                <label class="control-label col-sm-2 my-2" for="type">Quantity:</label>
-                                <div class="col-sm-2 pr-0">
-                                    <input id="quantity" class="form-control" name="quatity" type="number" min="1"
-                                        max="4" value="1">
-                                </div>
-                            </div>
-
-                            <div class="form-group mx-2 row">
-                                <label class="control-label col-sm-2 my-2" for="size">Size:</label>
-                                <div class="col-sm-10 my-2">
-                                    <label class="radio-inline pr-2">
-                                        <input type="radio" class="mr-2" name="size" id="small" value="small">Small
-                                    </label>
-                                    <label class="radio-inline pr-2">
-                                        <input type="radio" class="mr-2" name="size" id="medium" value="medium"
-                                            checked>Medium
-                                    </label>
-                                    <label class="radio-inline pr-2">
-                                        <input type="radio" class="mr-2" name="size" id="large" value="large">Large
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="form-group mx-2 row">
-                                <label class="control-label col-sm-2 my-2" for="crust">Crust:</label>
-                                <div class="col-sm-10 my-2">
-                                    <label class="radio-inline pr-2">
-                                        <input type="radio" class="mr-2" name="crust" id="thin" value="thin"
-                                            checked>Thin
-                                    </label>
-                                    <label class="radio-inline pr-2">
-                                        <input type="radio" class="mr-2" name="crust" id="thick" value="thick">Thick
-                                    </label>
-                                    <label class="radio-inline pr-2">
-                                        <input type="radio" class="radio-button" name="crust" id="deep"
-                                            value="deep dish">Deep Dish
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="form-group mx-2 row">
-                                <label class="control-label col-sm-2 my-2" for="topping">Topping</label>
-                                <div class="col-sm-10 my-2">
-                                    <label class="checkbox-inline pr-2">
-                                        <input type="checkbox" class="mr-2" id="mushroom" name="topping"
-                                            value="Mushrooms">Mushroom
-                                    </label>
-                                    <label class="checkbox-inline pr-2">
-                                        <input type="checkbox" class="mr-2" id="sausage" name="topping"
-                                            value="Sausage">Sausage
-                                    </label>
-                                    <label class="checkbox-inline pr-2">
-                                        <input type="checkbox" class="mr-2" id="olives" name="topping"
-                                            value="Olives">Olives
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="form-group mx-2 row">
-                                <label class="control-label col-sm-2 my-2" for="addons">Addons:</label>
-                                <div class="col-sm-10 pr-0">
-                                    <select multiple class="form-control" name="addons" id="addons">
-                                        <option value="Wings">Buffalo Wings</option>
-                                        <option value="Garlic Bread">Garlic Bread</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group mx-2">
-                                <div class="row">
-                                    <span id="outputPrice" style="opacity: 0;" class="col-sm-8"></span>
-                                    <div class="col-sm-4">
-                                        <div class="form-group mx-2">
-                                            <button type="submit" id="btnCalc" class="btn btn-secondary col-sm-12 m-2">
-                                                Calculate Price
-                                            </button>
-                                            <button type="button" id="btnNext" class="btn btn-secondary col-sm-12 m-2"
-                                                disabled="true">
-                                                Next
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
+      <!-- 2nd row - Content Section -->
+      <div class="row">
+        <main>
+          <div class="container">
+            <form class="form-horizontal" id="myForm">
+              <h2>Pizza Order Form</h2>
+              <fieldset class="border p-2">
+                <legend class="w-auto">Design your pizza</legend>
+                <div class="form-group mx-2 row">
+                  <label class="control-label col-sm-2 my-2" for="type"
+                    >Pizza Type:</label
+                  >
+                  <div class="col-sm-6">
+                    <select
+                      class="form-control pb-2"
+                      id="type"
+                      name="pizza type"
+                    ></select>
+                  </div>
+                  <label class="control-label col-sm-2 my-2" for="type"
+                    >Quantity:</label
+                  >
+                  <div class="col-sm-2 pr-0">
+                    <input
+                      id="quantity"
+                      class="form-control"
+                      name="quatity"
+                      type="number"
+                      min="1"
+                      max="4"
+                      value="1"
+                    />
+                  </div>
                 </div>
-            </main>
-        </div>
 
-        <!-- 3rd row - Footer -->
-        <div class="row">
-            <div class="col-12 footer-padding">
-                <div w3-include-html="footer.html"></div>
-            </div>
+                <div class="form-group mx-2 row">
+                  <label class="control-label col-sm-2 my-2" for="size"
+                    >Size:</label
+                  >
+                  <div class="col-sm-10 my-2">
+                    <label class="radio-inline pr-2">
+                      <input
+                        type="radio"
+                        class="mr-2"
+                        name="size"
+                        id="small"
+                        value="small"
+                      />Small
+                    </label>
+                    <label class="radio-inline pr-2">
+                      <input
+                        type="radio"
+                        class="mr-2"
+                        name="size"
+                        id="medium"
+                        value="medium"
+                        checked
+                      />Medium
+                    </label>
+                    <label class="radio-inline pr-2">
+                      <input
+                        type="radio"
+                        class="mr-2"
+                        name="size"
+                        id="large"
+                        value="large"
+                      />Large
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group mx-2 row">
+                  <label class="control-label col-sm-2 my-2" for="crust"
+                    >Crust:</label
+                  >
+                  <div class="col-sm-10 my-2">
+                    <label class="radio-inline pr-2">
+                      <input
+                        type="radio"
+                        class="mr-2"
+                        name="crust"
+                        id="thin"
+                        value="thin"
+                        checked
+                      />Thin
+                    </label>
+                    <label class="radio-inline pr-2">
+                      <input
+                        type="radio"
+                        class="mr-2"
+                        name="crust"
+                        id="thick"
+                        value="thick"
+                      />Thick
+                    </label>
+                    <label class="radio-inline pr-2">
+                      <input
+                        type="radio"
+                        class="radio-button"
+                        name="crust"
+                        id="deep"
+                        value="deep dish"
+                      />Deep Dish
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group mx-2 row">
+                  <label class="control-label col-sm-2 my-2" for="topping"
+                    >Topping</label
+                  >
+                  <div class="col-sm-10 my-2">
+                    <label class="checkbox-inline pr-2">
+                      <input
+                        type="checkbox"
+                        class="mr-2"
+                        id="mushroom"
+                        name="topping"
+                        value="Mushrooms"
+                      />Mushroom
+                    </label>
+                    <label class="checkbox-inline pr-2">
+                      <input
+                        type="checkbox"
+                        class="mr-2"
+                        id="sausage"
+                        name="topping"
+                        value="Sausage"
+                      />Sausage
+                    </label>
+                    <label class="checkbox-inline pr-2">
+                      <input
+                        type="checkbox"
+                        class="mr-2"
+                        id="olives"
+                        name="topping"
+                        value="Olives"
+                      />Olives
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group mx-2 row">
+                  <label class="control-label col-sm-2 my-2" for="addons"
+                    >Addons:</label
+                  >
+                  <div class="col-sm-10 pr-0">
+                    <select
+                      multiple
+                      class="form-control"
+                      name="addons"
+                      id="addons"
+                    >
+                      <option value="Wings">Buffalo Wings</option>
+                      <option value="Garlic Bread">Garlic Bread</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group mx-2">
+                  <div class="row">
+                    <span
+                      id="outputPrice"
+                      style="opacity: 0"
+                      class="col-sm-8"
+                    ></span>
+                    <div class="col-sm-4">
+                      <div class="form-group mx-2">
+                        <button
+                          type="submit"
+                          id="btnCalc"
+                          class="btn btn-secondary col-sm-12 m-2"
+                        >
+                          Calculate Price
+                        </button>
+                        <button
+                          type="button"
+                          id="btnNext"
+                          class="btn btn-secondary col-sm-12 m-2"
+                          disabled="true"
+                        >
+                          Next
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </main>
+      </div>
+
+      <!-- 3rd row - Footer -->
+      <div class="row">
+        <div class="col-12 footer-padding">
+          <div w3-include-html="footer.html"></div>
         </div>
+      </div>
     </div>
 
     <script src="js/w3-include-HTML.js"></script>
     <script src="js/order.js"></script>
-    <script src="js/Weather-API.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
-        crossorigin="anonymous"></script>
-</body>
+    <script src="js/weather-API.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

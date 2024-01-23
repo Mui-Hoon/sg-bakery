@@ -1,111 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>United Bakery Order</title>
-    <link href="https://fonts.googleapis.com/css?family=Stint+Ultra+Expanded" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/united-bakery.css">
-    <link rel="stylesheet" href="css/delivery-info.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Stint+Ultra+Expanded"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/united-bakery.css" />
+    <link rel="stylesheet" href="css/delivery-info.css" />
+  </head>
 
-<body>
+  <body>
     <div class="container-fluid">
-        <!-- 1st row - Header -->
-        <div class="row">
-            <div class="col-md-12 header-padding">
-                <div w3-include-html="header.html"></div>
-            </div>
+      <!-- 1st row - Header -->
+      <div class="row">
+        <div class="col-md-12 header-padding">
+          <div w3-include-html="header.html"></div>
         </div>
+      </div>
 
-        <!-- 2nd row - Content Section -->
-        <div class="row">
-            <main>
-                <div class="container">
-                    <form class="form-horizontal" id="myForm" onsubmit="submitForm(); return false">
-                        <fieldset class="border p-2">
-                            <legend class="w-auto">Delivery Information</legend>
-                            <div class="form-group mx-2 row">
-                                <label class="control-label col-sm-2 my-2" for="name">Name:</label>
-                                <div class="col-sm-10 pr-0 pb-2">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required>
-                                </div>
-                            </div>
-                            <div class="form-group mx-2 row">
-                                <label class="control-label col-sm-2 my-2" for="address">Address:</label>
-                                <div class="col-sm-10 pr-0 pb-2">
-                                    <textarea class="form-control" rows="3" id="address" name="address" required></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group mx-2 row">
-                                <label class="control-label col-sm-2 my-2" for="postalCode">Postal Code:</label>
-                                <div class="col-sm-10 pr-0 pb-2">
-                                    <input type="text" class="form-control" id="postalCode" maxlength="6" size="6" name="postalCode"
-                                        required pattern="\d{6}" placeholder="Enter postal code">
-                                </div>
-                            </div>
-                            <div class="form-group mx-2 row">
-                                <label class="control-label col-sm-2 my-2" for="name">Phone:</label>
-                                <div class="col-sm-10 pr-0 pb-2">
-                                    <input type="tel" class="form-control" id="telephone" name="phone" size="8" pattern="[689]\d{7}"
-                                        placeholder="Enter phone" required>
-                                </div>
-                            </div>
-            
-                            <div class="form-group mx-2 row">
-                                <label class="control-label col-sm-2 my-2" for="email">Email:</label>
-                                <div class="col-sm-10 pr-0 pb-2">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
-                                </div>
-                            </div>
-            
-                            <div class="form-group mx-2 row">
-                                <label class="control-label col-sm-2 my-2" for="date">Date:</label>
-                                <div class="col-sm-6">
-                                    <input type="date" class="form-control" id="date" name="date" required>
-                                </div>
-                                <label class="control-label col-sm-2 my-2" for="time">Time:</label>
-                                <div class="col-sm-2 pr-0">
-                                    <input type="time" class="form-control" id="time" name="time" min="10:00" max="22:00" required>
-                                </div>
-                            </div>
-            
-                            <div class="form-group mx-2 row">
-                                <span id="finalMessage" style="opacity: 0;" class="col-sm-10"></span>
-                                <div class="col-sm-2 pr-0">
-                                    <button type="submit" id="btnSubmit" class="btn btn-secondary col-sm-12 m-2">
-                                        Submit
-                                    </button>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
+      <!-- 2nd row - Content Section -->
+      <div class="row">
+        <main>
+          <div class="container">
+            <form
+              class="form-horizontal"
+              id="myForm"
+              onsubmit="submitForm(); return false"
+            >
+              <fieldset class="border p-2">
+                <legend class="w-auto">Delivery Information</legend>
+                <div class="form-group mx-2 row">
+                  <label class="control-label col-sm-2 my-2" for="name"
+                    >Name:</label
+                  >
+                  <div class="col-sm-10 pr-0 pb-2">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      name="name"
+                      placeholder="Enter name"
+                      required
+                    />
+                  </div>
                 </div>
-            </main>
-        </div>
+                <div class="form-group mx-2 row">
+                  <label class="control-label col-sm-2 my-2" for="address"
+                    >Address:</label
+                  >
+                  <div class="col-sm-10 pr-0 pb-2">
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      id="address"
+                      name="address"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="form-group mx-2 row">
+                  <label class="control-label col-sm-2 my-2" for="postalCode"
+                    >Postal Code:</label
+                  >
+                  <div class="col-sm-10 pr-0 pb-2">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="postalCode"
+                      maxlength="6"
+                      size="6"
+                      name="postalCode"
+                      required
+                      pattern="\d{6}"
+                      placeholder="Enter postal code"
+                    />
+                  </div>
+                </div>
+                <div class="form-group mx-2 row">
+                  <label class="control-label col-sm-2 my-2" for="name"
+                    >Phone:</label
+                  >
+                  <div class="col-sm-10 pr-0 pb-2">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="telephone"
+                      name="phone"
+                      size="8"
+                      pattern="[689]\d{7}"
+                      placeholder="Enter phone"
+                      required
+                    />
+                  </div>
+                </div>
 
-        <!-- 3rd row - Footer -->
-        <div class="row">
-            <div class="col-12 footer-padding">
-                <div w3-include-html="footer.html"></div>
-            </div>
+                <div class="form-group mx-2 row">
+                  <label class="control-label col-sm-2 my-2" for="email"
+                    >Email:</label
+                  >
+                  <div class="col-sm-10 pr-0 pb-2">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group mx-2 row">
+                  <label class="control-label col-sm-2 my-2" for="date"
+                    >Date:</label
+                  >
+                  <div class="col-sm-6">
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="date"
+                      name="date"
+                      required
+                    />
+                  </div>
+                  <label class="control-label col-sm-2 my-2" for="time"
+                    >Time:</label
+                  >
+                  <div class="col-sm-2 pr-0">
+                    <input
+                      type="time"
+                      class="form-control"
+                      id="time"
+                      name="time"
+                      min="10:00"
+                      max="22:00"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group mx-2 row">
+                  <span
+                    id="finalMessage"
+                    style="opacity: 0"
+                    class="col-sm-10"
+                  ></span>
+                  <div class="col-sm-2 pr-0">
+                    <button
+                      type="submit"
+                      id="btnSubmit"
+                      class="btn btn-secondary col-sm-12 m-2"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </main>
+      </div>
+
+      <!-- 3rd row - Footer -->
+      <div class="row">
+        <div class="col-12 footer-padding">
+          <div w3-include-html="footer.html"></div>
         </div>
+      </div>
     </div>
-    
+
     <script src="js/w3-include-HTML.js"></script>
     <script src="js/delivery-info.js"></script>
-    <script src="js/Weather-API.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
-    crossorigin="anonymous"></script>
-</body>
+    <script src="js/weather-API.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
