@@ -1,0 +1,21 @@
+main {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+    color: #555;
+    padding: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border: double 4px #EADDC4;
+    border-radius: 25px;
+ }
+
+ form {
+    padding: 5px 10px;
+    border: 2px solid rgb(211, 211, 211);
+    border-radius: 30px;
+    width: 100%;
+    margin: 0 auto;
+}
+.contact {
+    text-align: center;
+}

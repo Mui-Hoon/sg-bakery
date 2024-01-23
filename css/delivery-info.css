@@ -1,0 +1,28 @@
+main {
+    width: 100%;
+    color: #555;
+    padding: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border: double 4px #EADDC4;
+    border-radius: 25px;
+ }
+
+ form {
+    padding: 5px 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+legend {
+    font-size: inherit;
+    line-height: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #555;
+    border-bottom: none;
+}
+#finalMessage {
+    padding-top: .5rem;
+    color: blue;
+}

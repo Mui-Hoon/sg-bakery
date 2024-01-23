@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/* main "products" styles */
+
+main {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.8em;
+  padding: 1em;
+  margin-left: 0.5em;
+  border: double 4px #EADDC4;
+  border-radius: 25px;
+}
+
+main img {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+h2 {
+  font-family: 'Stint Ultra Expanded', cursive;
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: #7A0002;
+  border-top: 1px solid;
+  border-left: 3px solid;
+  padding-left: 1em;
+}
+
+p.more {
+  font-family: verdana, sans-serif;
+  text-transform: uppercase;
+  font-size: .8em;
+  clear: left;
+}
+
+/* aside "hours" styles */
+
+aside {
+  background: url(../images/scallop.png) repeat-y left top;
+  background-color: #F6F3ED;
+  padding: 1em;
+  margin-right: 0.5em;
+  padding-left: 45px;
+  border-top-right-radius: 25px;
+  height: 100%;
+}
+
+.day {
+  color: #783F27;
+  font-family: verdana, sans-serif;
+  font-size: .7em;
+  text-transform: uppercase;
+}
+
+
+.no-padding-left {
+  padding-left: 0;
+
+}
+
+.no-padding-right {
+  padding-right: 0;
+}

@@ -1,0 +1,30 @@
+main {
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   width: 100%;
+   color: #555;
+   padding: 1em;
+   margin-left: 0.5em;
+   margin-right: 0.5em;
+   border: double 4px #EADDC4;
+   border-radius: 25px;
+}
+
+.padding {
+   padding: 1em;
+}
+
+section {
+   font-style: italic;
+   padding-left: 30px;
+}
+
+#quotes {
+   padding-left: 30px;
+   padding-right: 30px;
+}
+
+.header {
+   background-color: #f3e7d7;
+   border-bottom: 2px solid #EADDC4;
+   padding: 1em;
+}

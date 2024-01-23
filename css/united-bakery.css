@@ -1,0 +1,32 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Georgia, serif;
+  font-size: 100%;
+  background-color: white;
+  margin: 0;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+.row {
+  margin:0;
+}
+.header-padding {
+  padding-left:0;
+  padding-right: 0;
+}
+.footer-padding {
+  padding-left:0;
+  padding-right: 0; 
+  padding-top:0.5em;
+}

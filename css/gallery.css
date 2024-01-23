@@ -1,0 +1,16 @@
+main {
+    width: 100%;
+    color: #555;
+    padding: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border: double 4px #EADDC4;
+    border-radius: 25px;
+ }
+ 
+#gallery-heading, h3 {
+    background-color: bisque;
+    text-align: center;
+    font-family: Verdana, Arial, serif;
+    color: rosybrown;
+}
