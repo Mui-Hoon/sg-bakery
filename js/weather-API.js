@@ -7,6 +7,7 @@ request.onload = displayResult;
 
 function displayResult() {
   let resultElement = document.getElementById("web-api-result");
+  console.log(resultElement);
   if (request.status == 200) {
     let data = request.response;
     let myObj = JSON.parse(data);
